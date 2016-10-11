@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender:  Any?) {
         if segue.identifier == "goTo2",
             let svc = segue.destination as? ViewController2     //only true if right side of statement delivers not nil
         {
