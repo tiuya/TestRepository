@@ -11,26 +11,26 @@ import XCTest
 
 class SecondAppTests: XCTestCase {
     
+    var vc:ViewController!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        // This method is called before the invocation of each test method in the class.
+        
+        //to always have a fresh storyoard for the tests:
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        vc = storyboard.instantiateViewController(withIdentifier: "1") as! ViewController
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        // This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAdd() {
+        let c = vc.add(1 , 1)
+        XCTAssert( c == 2, "\(c)") //gibt den Wert von c als Fehlercode aus, wenn c nicht 2 ist, sonst Test succeeded
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
     
 }

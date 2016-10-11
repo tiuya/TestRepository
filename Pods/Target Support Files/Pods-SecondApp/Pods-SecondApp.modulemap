@@ -1,0 +1,6 @@
+framework module Pods_SecondApp {
+  umbrella header "Pods-SecondApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
